@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   delete "/drivers/:id" => "drivers#destroy"
   put "/drivers/:id" => "drivers#update"
 
+  post "/distance" => "distance_matrix#trigger_distance_api"
+
 end
