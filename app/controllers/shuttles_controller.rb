@@ -11,7 +11,7 @@ class ShuttlesController < ApplicationController
   end
 
   def create
-    new_shuttle = Shuttle.new(shuttle_num: params[:shuttle_num], lat: params[:lat], lng: params[:lng], driver_id: params[:driver_id])
+    new_shuttle = Shuttle.new(shuttle_num: params[:shuttle_num], lat: params[:lat], lng: params[:lng], toSeward: params[:dir], driver_id: params[:driver_id])
 
     if new_shuttle.save
       render json: new_shuttle
@@ -22,7 +22,7 @@ class ShuttlesController < ApplicationController
 
   def update
     found_shuttle  = Shuttle.where(shuttle_num: params[:shuttle_num])
-    updated = found_shuttle.update(shuttle_num: params[:new_shuttle_num], lat: params[:new_lat], lng: params[:new_lng], driver_id: params[:new_driver_id])
+    updated = found_shuttle.update(shuttle_num: params[:new_shuttle_num], lat: params[:new_lat], lng: params[:new_lng], toSeward: params[:new_dir], driver_id: params[:new_driver_id])
 
     if updated
       render json: updated

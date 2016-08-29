@@ -4,6 +4,7 @@ class CreateShuttles < ActiveRecord::Migration[5.0]
       t.integer :shuttle_num
       t.float :lat
       t.float :lng
+      t.boolean :toSeward
       t.references :driver
       t.timestamps
     end

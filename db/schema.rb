@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160826181946) do
     t.integer  "shuttle_num"
     t.float    "lat"
     t.float    "lng"
+    t.boolean  "toSeward"
     t.integer  "driver_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
