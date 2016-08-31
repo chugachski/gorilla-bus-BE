@@ -4,7 +4,7 @@ class DistanceMatrixController < ApplicationController
     lng = params[:lng]
     stop_lat = params[:stopLat]
     stop_lng = params[:stopLng]
-    matrix_key = ENV["DISTANCE_MATRIX_KEY"]
+    matrix_key = 'AIzaSyD5ZfvxOIfkef7YwfrAOWxniSur8U9Lwzo'
 
     full_query = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{lat},#{lng}&destinations=#{stop_lat},#{stop_lng}&key=#{matrix_key}"
 
